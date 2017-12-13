@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>chrome options</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/chrome-options/third_party/chrome-bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/chrome-options/third_party/dragula.min.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/chrome-options/third_party/color-picker.min.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/chrome-options/chrome-options.css" />
+  <style>
+    body {
+        padding: 20px;
+    }
+    .chrome-bootstrap h1.page-header {
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .page-header img {        
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 15px;
+    }
+    table {
+        margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="chrome-bootstrap">
+  <h1 class="page-header"><img src="icon32.png" />History Domain Scrubber Options</h1>
+
+  <div class="frame">
+    <div class="navigation">
+      <h1 class="chrome-options-title">History Domain Scrubber Options</h1>
+      <ul id="main-menu" class="menu">
+      </ul>
+      <ul class="menu about">
+        <li>
+          <a href="#about">About</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mainview view">
+      <div id="about">
+        <header>
+          <h1>About</h1>
+        </header>
+        <div class="content">
+          <p>hello</p>
+        </div>
+      </div>
+    </div>
+    <div class="save-container">
+      <span class="auto">Saved!</span>
+      <button disabled>Save</button>
+    </div>
+  </div>
+  <script src="bower_components/chrome-options/third_party/dragula.min.js"></script>
+  <script src="bower_components/chrome-options/third_party/color-picker.min.js"></script>
+  <script src="bower_components/chrome-options/dom.js"></script>
+  <script src="bower_components/chrome-options/util.js"></script>
+  <script src="bower_components/chrome-options/chrome-options.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

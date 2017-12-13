@@ -1,0 +1,26 @@
+{
+  "name": "chrome-options",
+  "main": "chrome-options.js",
+  "version": "0.2.0",
+  "description": "Options page for your Chrome extension",
+  "author": "Roly Fentanes (https://github.com/fent)",
+  "keywords": [
+    "chrome",
+    "extension"
+  ],
+  "homepage": "https://github.com/fent/chrome-options",
+  "license": "MIT",
+  "ignore": [
+    "images"
+  ],
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "62bfc3969d3e47f8d3828effd9a9f75b83a02af7"
+  },
+  "_source": "https://github.com/fent/chrome-options.git",
+  "_target": "^0.2.0",
+  "_originalSource": "chrome-options",
+  "_direct": true
+}
