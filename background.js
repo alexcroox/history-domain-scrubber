@@ -32,10 +32,10 @@ function clearHistory() {
                         url: historyItem.url
                     })
                 });
-
-                clearing = false;
             })
         });
+
+        clearing = false;
     });
 }
 
