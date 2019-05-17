@@ -1,6 +1,6 @@
 # HistoryDomainScrubber Chrome Extension
 
-Automatically and continually clears Chrome history for any domain you enter.
+Automatically and continually clears Chrome history for any domains you setup.
 
 
 ## Installing
