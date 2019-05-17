@@ -6,7 +6,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 
 function clearHistory() {
-
     if (clearing)
         return;
 
@@ -15,17 +14,12 @@ function clearHistory() {
     var domains = [];
 
     chrome.storage.sync.get({ "domains": [] }, function(options) {
-
         domains = options.domains;
-
-        console.log('Clearing history for ' + domains.length + ' domains');
 
         domains.forEach(function(domain) {
             chrome.history.search({
                 "text": domain
             }, function(historyItems) {
-                console.log("Search results for " + domain, historyItems.length);
-
                 historyItems.forEach(function(historyItem) {
                     console.log(historyItem.url);
                     chrome.history.deleteUrl({
