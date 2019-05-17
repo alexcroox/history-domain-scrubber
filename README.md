@@ -2,8 +2,6 @@
 
 Automatically and continually clears Chrome history for any domain you enter.
 
-*Currently the Chrome delete [history API has a bug](https://bugs.chromium.org/p/chromium/issues/detail?id=395955) where it only deletes local history not synced history*
-
 
 ## Installing
 
