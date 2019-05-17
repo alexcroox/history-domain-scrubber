@@ -1,42 +1,46 @@
-var clearing = false;
+let clearing = false
 
 // Listen for our extension icon to be clicked then open options page
 chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.runtime.openOptionsPage();
-});
+  chrome.runtime.openOptionsPage()
+})
 
 function clearHistory() {
-    if (clearing)
-        return;
+  if (clearing) {
+    return
+  }
 
-    clearing = true;
+  clearing = true
 
-    var domains = [];
+  let domains = []
 
-    chrome.storage.sync.get({ "domains": [] }, function(options) {
-        domains = options.domains;
+  chrome.storage.sync.get({ domains: [] }, options => {
+    domains = options.domains
 
-        domains.forEach(function(domain) {
-            chrome.history.search({
-                "text": domain
-            }, function(historyItems) {
-                historyItems.forEach(function(historyItem) {
-                    console.log(historyItem.url);
-                    chrome.history.deleteUrl({
-                        url: historyItem.url
-                    })
-                });
+    // Loop through each banned domain and delete all history entries for it
+    domains.forEach(function(domain) {
+      chrome.history.search(
+        {
+          text: domain
+        },
+        historyItems => {
+          historyItems.forEach(historyItem => {
+            chrome.history.deleteUrl({
+              url: historyItem.url
             })
-        });
+          })
+        }
+      )
+    })
 
-        clearing = false;
-    });
+    clearing = false
+  })
 }
 
 chrome.alarms.create('checkNewTasks', {
-    periodInMinutes: 1
-});
+  periodInMinutes: 1
+})
 
-chrome.alarms.onAlarm.addListener(clearHistory);
+chrome.alarms.onAlarm.addListener(clearHistory)
 
-clearHistory();
+clearHistory()
